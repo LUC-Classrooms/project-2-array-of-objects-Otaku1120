@@ -1,6 +1,6 @@
 /*
  Project 2 - Array of Objects
- Name: 
+ Name: Anahi Paz
  Comments: 
  */
 
@@ -11,16 +11,23 @@
 ***/
 
 // Global Variables go here
-
+var sprites = new Array(20);
 function setup(){
   // this function will run once
   createCanvas(600, 400); // create a 600 x 400 pixel drawing canvas
 
-
+  for(let i =0; i < sprites.length; i++){
+    sprites[i] = new Sprite(random(width), random(height));
+    console.log(sprites[i]);
+  }
 }
 
 function draw(){
-  background(200); //light gray background
+  background(15,192,252); //blue water background
   
+  for(let i = 0 ; i < sprites.length; i++){
+   sprites[i].display();
+   sprites[i].move();
+  }
 }
 
